@@ -1,5 +1,5 @@
 const express = require('express')
-const url ='mongodb+srv://cuong123:123456@@cluster0.pdvk5.mongodb.net/test'
+const url ='mongodb+srv://nguyenmanhcuong:cuong123@cluster0.pdvk5.mongodb.net/test'
 const app = express()
 const {ObjectId,MongoClient}= require('mongodb')
 app.use(express.urlencoded({extended:true}))

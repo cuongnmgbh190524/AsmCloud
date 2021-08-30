@@ -1,5 +1,5 @@
 const express = require('express')
-const url ='mongodb+srv://AsmCloud:12345678@@cluster0.pdvk5.mongodb.net/test'
+const url ='mongodb+srv://cuong123:123456@@cluster0.pdvk5.mongodb.net/test'
 const app = express()
 const {ObjectId,MongoClient}= require('mongodb')
 app.use(express.urlencoded({extended:true}))
@@ -55,8 +55,6 @@ app.get('/', async (req,res)=>{
 
     res.render('index',{data:allProducts})
 
-
 }) 
-
 const PORT = process.env.PORT || 5000
 app.listen(PORT)

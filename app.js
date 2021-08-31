@@ -10,8 +10,8 @@ app.post('/update',async (req,res)=>{
     const nameInput = req.body.txtName;
     const priceInput = req.body.txtPrice;
     const pictureInput= req.body.txtPicture;
-    const client = await MongoClient.connect(url);
-    const dbo= client.db("ATN");
+    const client = await MongoClient.connect(url)
+    const dbo = client.db("ATN")
     const updateProduct= await dbo.collection("products").updateOne({_id:ObjectId(id)},{$set:{name:nameInput,price:priceInput,picture:pictureInput}})
     res.redirect('/');
 })
@@ -58,3 +58,4 @@ app.get('/', async (req,res)=>{
 }) 
 const PORT = process.env.PORT || 5000
 app.listen(PORT)
+
